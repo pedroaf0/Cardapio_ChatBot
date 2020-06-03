@@ -20,7 +20,7 @@ console.log({id, text})
           }
         }
       }
-   }, error => { if(error) console.log(error) });
+   }, (error, data, response) => { if(error) console.log(error) });
 }
 exports.OnTyping =  function OnTyping(id){
    T.post('direct_messages/indicate_typing', {recipient_id: id}, error => {
